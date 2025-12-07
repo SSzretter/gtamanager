@@ -29,6 +29,7 @@ Chromium-based desktop browsers. The option to do this is generally found in you
 Version history is documented in the patch notes section of the web application.
 
 ## Contributors
+**sszretter**
 **func_vehicle**  
 **Flopster** - Mobile layout fixes  
 **sol3uk** - Dark mode  
