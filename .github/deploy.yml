@@ -1,45 +1,38 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches:
-      - main # This workflow runs when you push to the 'main' branch
-
-# Allows the action to create the gh-pages branch and deployment
+      - main
 permissions:
   contents: write
-  pages: write # Required for the new Pages deployment method
-  id-token: write # Required for the new Pages deployment method
-
+  pages: write
+  id-token: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 🔧
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20' # Use a recent LTS version
 
-      - name: Install Dependencies 💾
-        # Use 'npm ci' for clean install in CI environments
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Build React App 🔨
-        # This command runs the script defined in your package.json (e.g., "react-scripts build")
+      - name: Build React App
         run: npm run build
 
-      - name: Setup Pages ⚙️
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Artifact ⬆️
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # The directory that contains the output files from the build step
           path: './build'
 
-      - name: Deploy to GitHub Pages 🚀
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
