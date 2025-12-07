@@ -1,7 +1,7 @@
 {
   "name": "gtamanager",
   "version": "2.0.2",
-  "homepage": "https://cave-diver.github.io/gtamanager",
+  "homepage": "https://sszretter.github.io/gtamanager",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
