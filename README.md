@@ -1,5 +1,5 @@
 # GTA V Business Manager (S2H)
-
+ 
 The Business Manager is a web application which helps keep track of your in-game business supply and stock
 levels in GTA Online. It simulates the businesses and notifies you when one needs your attention.
 
