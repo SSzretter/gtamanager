@@ -4,7 +4,13 @@ on:
   push:
     branches:
       - master
+  push:
+    branches:
+      - master
 
+permissions:
+  contents: read
+  pages: write
 permissions:
   contents: read
   pages: write
